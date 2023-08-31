@@ -70,5 +70,6 @@ class Main {
         Rev rev = new Rev();
         rev.method(Array.array);
         scanner.close();
+        System.out.println("final");
     }
 }
