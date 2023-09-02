@@ -1,9 +1,7 @@
 package arrayrevNcheck;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 class Rev {
     public void method(List<Integer> array) {
         for (int i = array.size() - 1; i >= 0; i--) {
@@ -61,6 +59,13 @@ class Array {
         }
     }
 }
+class StreamAdd {
+    public static Integer streamAdd (List <Integer> array){
+Integer streamAdd = array.stream()
+                        .reduce(0 ,(c,e) -> c+e);
+    return streamAdd;
+                    }
+}
 
 class Main {
     public static void main(String[] args) {
@@ -72,6 +77,8 @@ class Main {
         Rev rev = new Rev();
         rev.method(Array.array);
         scanner.close();
+        System.out.println("      ");
+        System.out.println(StreamAdd.streamAdd(Array.array));
         System.out.println("final");
     }
 }
